@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="429 - Too Many Requests. You've hit the rate limit.">
+    <title>429 - Too Many Requests</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 4em;
+            margin: 0;
+            color: #d9534f;
+        }
+        h2 {
+            font-size: 2em;
+            margin: 10px 0;
+            color: #333;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        .retry {
+            color: #0078D7;
+            font-weight: bold;
+        }
+        .home-link {
+            margin-top: 20px;
+            text-decoration: none;
+            color: #0078D7;
+            font-size: 1.2em;
+            padding: 10px 20px;
+            border: 2px solid #0078D7;
+            border-radius: 5px;
+            display: inline-block;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .home-link:hover {
+            background-color: #0078D7;
+            color: #fff;
+        }
+        footer {
+            margin-top: 50px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <h1>429</h1>
+    <h2>Too Many Requests</h2>
+    <p>
+        Whoops! It looks like you've exceeded the rate limit.<br>
+        Please wait a moment and <span class="retry">try again later</span>.
+    </p>
+    <a href="/" class="home-link">Return to Home</a>
+    <footer>
+        © 2024 GoBo. All rights reserved.
+    </footer>
+</body>
+</html>
+
