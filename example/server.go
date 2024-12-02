@@ -1,18 +1,22 @@
 package main
 
 import (
-	"fmt"
+	"log"
 	"net/http"
 	"os"
 )
 
 func main() {
-  indexContent, err := os.ReadFile("./index.html")
+  indexContent, err := os.ReadFile("./html/index.html")
+  host := "localhost"
+  port := "9999"
+
   if err != nil { panic(err) }
   http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-    fmt.Println("Received !!")
+    log.Println("Received !!")
     w.Write(indexContent)
   })
-
-  panic(http.ListenAndServe(":9999", nil))
+  
+  log.Printf("Hosting on: %s:%s\n", host, port)
+  panic(http.ListenAndServe(host+":"+port, nil))
 }
